@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Styling</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    h1 {
+      color: red;
+      // visibility: hidden;
+      // display: none;
+
+      display: inline;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    #box1 {
+      background: black;
+      color: white;
+      width: 200px;
+      padding: 20px;
+      margin: 20px;
+      border: 2px dashed blue;
+      float: left;
+    }
+
+    #box2 {
+      background: green;
+      color: white;
+      width: 200px;
+      padding: 20px;
+      margin: 20px;
+      border: 2px dashed red;
+      float: right;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    ul.my-list {
+      list-style: none;
+      padding: 0;
+      line-height: 2.2em;
+    }
+
+    ul.my-list li {
+      border-bottom: 1px dotted red;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="text-center">
+    <h1>Welcome</h1>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+  </div>
+
+  <div id="box1">
+    This is Box 1
+  </div>
+
+  <div id="box2">
+    This is Box 2
+  </div>
+
+  <div class="clear"></div>
+  <div>Hello</div>
+
+  <ul class="my-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+</body>
+</html>

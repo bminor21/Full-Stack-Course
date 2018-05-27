@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Positioning & Background</title>
+  <style>
+
+  .wrapper {
+    border: 1px #000 solid;
+    width: 400px;
+    height: 400px;
+    left: 50px;
+    top: 100px;
+    position: relative;
+    /*
+    background-image: url("bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-repeat: 100px 0;
+    */
+
+    background: black url("bg.jpg") no-repeat 0 75px;
+    background-size: contain;
+  }
+
+  .inside {
+    border: 1px solid red;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    visibility: hidden;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="inside">
+    </div>
+  </div>
+
+</body>
+</html>

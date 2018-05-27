@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Columns</title>
+  <style>
+
+    article {
+      column-count: 2;
+      column-gap: 40px;
+      column-rule: 1px solid coral;
+    }
+
+    article h1 {
+      -webkit-column-span: all;
+    }
+
+    .textbox1 {
+      border: 2px solid;
+      padding: 20px;
+      width: 300px;
+      overflow: auto;
+      resize: both;
+    }
+
+    .textbox2 {
+      margin: 20px;
+      padding: 10px;
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+
+      outline: 1px solid red;
+      outline-offset: 10px;
+    }
+
+    .flex-container {
+      display: flex;
+      width: 400px;
+      height: 250px;
+      background-color: black;
+
+      justify-content: space-around;
+    }
+
+    .flex-item {
+      background-color: lightblue;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+    }
+
+    .first {
+      order: -1;
+    }
+
+  </style>
+</head>
+<body>
+  <article>
+    <h1>Final Fantasy Legend 3</h1>
+    The Pureland Water Entity appeared and flooded this world's present, past and future. The water brought monsters, which hunted people day and night. Cities fell one by one, covered by the sea... However, a few individuals prepare for a journey that may determine the fate of the world. Behold: the sealed city Dharm. Here three young people sent back as children from the ruins of the future, are living with the Elder. He has reared them together with his own granddaughter.
+  </article>
+
+  <br>
+  <div class="textbox1">
+    Try and resize this element.
+  </div>
+
+  <br>
+  <div class="textbox2">
+    This element has a 10 pixel outline.
+  </div>
+
+  <br>
+  <div class="flex-container">
+    <div class="flex-item">Flex Item 1</div>
+    <div class="flex-item first">Flex Item 2</div>
+    <div class="flex-item">Flex Item 3</div>
+  </div>
+
+</body>
+</html>

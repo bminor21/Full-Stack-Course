@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pseudo Classes</title>
+  <style>
+
+    a:hover {
+      color: red;
+      font-weight: bold;
+    }
+
+    a:active {
+      color: green;
+      font-weight: bold;
+    }
+
+    .my-form input:focus {
+      background: pink;
+      width: 300px;
+    }
+
+    .my-list li:first-child {
+      color: green;
+      font-weight: bold;
+    }
+
+    .my-list li:last-child {
+      color: red;
+      font-weight: bold;
+    }
+
+    .my-list li:nth-child(3n+3) {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .my-list li:nth-child(even) {
+      font-weight: bold;
+      background: orange;
+      width: 100px;
+    }
+    .my-list li:nth-child(odd) {
+      font-weight: bold;
+      background: grey;
+      width: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <a href="#">Click Me</a>
+
+  <form class="my-form">
+    <input type="text">
+  </form>
+
+  <ul class="my-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+  </ul>
+
+</body>
+</html>

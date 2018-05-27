@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio and Video</title>
+</head>
+<body>
+
+  <h1>Video</h1>
+  <video src="Evenstar.mp4" controls height="240" width="320" id="myVideo">
+    Your browser does not support video
+  </video>
+
+  <h1>Audio</h1>
+  <audio src="sonatina.wav" id="myAudio">
+  </audio>
+
+  <div>
+    <button onclick="document.getElementById('myAudio').play()">Play</button>
+    <button onclick="document.getElementById('myAudio').pause()">Pause</button>
+    <button onclick="document.getElementById('myAudio').volume+=0.1">Volume Up</button>
+    <button onclick="document.getElementById('myAudio').volume-=0.1">Volume Down</button>
+  </div>
+
+<script>
+  // var v  = document.getElementById("myAudio");
+  // v.play();
+</script>
+</body>
+</html>

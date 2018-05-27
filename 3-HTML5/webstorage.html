@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Storage</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div id="name">
+  </div>
+
+  <script>
+    // store an item
+    /*
+    if( typeof(Storage) !== "undefined" ) {
+      localStorage.setItem('name','Brett');
+
+      // get item
+      console.log( localStorage.getItem('name') );
+
+      if( localStorage.name ){
+        document.getElementById('name').innerHTML=localStorage.getItem('name');
+      } else {
+        document.getElementById('name').innerHTML="No Name Found";
+      }
+    } else {
+      console.log( "Local Storage not available");
+    }
+    */
+
+    if( typeof(Storage) !== "undefined" ) {
+      sessionStorage.setItem('name','Turbo Man');
+
+      // get item
+      console.log( sessionStorage.getItem('name') );
+
+      if( sessionStorage.name ){
+        document.getElementById('name').innerHTML=sessionStorage.getItem('name');
+      } else {
+        document.getElementById('name').innerHTML="No Name Found";
+      }
+    } else {
+      console.log( "Local Storage not available");
+    }
+  </script>
+
+</body>
+</html>
