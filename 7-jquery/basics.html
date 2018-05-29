@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery | Basics & Events</title>
+  <script
+  			  src="https://code.jquery.com/jquery-3.3.1.js"
+  			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  			  crossorigin="anonymous"></script>
+  <style>
+
+    #square {
+      background: red;
+      width: 200px;
+      height: 200px;
+    }
+
+  </style>
+
+<body>
+  <p>This is a paragraph</p>
+
+  <button id="myBtn">CLICK ME</button>
+  <br><br>
+
+  <div id="square"></div>
+  <br><br>
+  <div id="output"></div>
+
+  <script>
+
+    var toggle = 1;
+    $(document).ready( function(){
+
+      // $('#myBtn').click( function(){
+      //   $('p').toggle();
+      // });
+
+      $("#myBtn").dblclick( function(){
+        $('p').toggle();
+       });
+
+       // $("#square").hover( function() {
+       //   $(this).text("HOVERING");
+       // }, function(){
+       //   $(this).text("");
+       // });
+
+       // $("#square").mouseenter( function() {
+       //   $(this).text("Hover");
+       // });
+       //
+       // $("#square").mouseout( function() {
+       //   $(this).text("");
+       // })
+
+       //
+       // $("#square").mousedown( function() {
+       //   $(this).text("Mouse down");
+       //
+       //   $(this).mouseup(function(){
+       //     $(this).text("");
+       //   });
+       // });
+
+       $("#square").mousemove( function(event) {
+         var msg = "Mouse Position - ";
+         msg += event.pageX + " , " + event.pageY;
+         $("#output").html(msg);
+       });
+
+    });
+  </script>
+</body>
+</html>

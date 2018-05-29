@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery | Basics & Events</title>
+  <script
+  			  src="https://code.jquery.com/jquery-3.3.1.js"
+  			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  			  crossorigin="anonymous"></script>
+  <style>
+
+  </style>
+
+<body>
+
+    <form id="myForm">
+      <div>
+        <label>Name: <label><br>
+        <input type="text">
+      </div>
+      <div>
+        <label>Email: <label><br>
+        <input type="text">
+      </div>
+      <div>
+        <label>Location: <label><br>
+        <input type="text" value="North Caolina">
+      </div>
+      <div>
+        <label>Category: <label><br>
+        <select>
+          <option value="1">Cat 1</option>
+          <option value="2">Cat 2</option>
+          <option value="3">Cat 3</option>
+          <option value="4">Cat 4</option>
+        </select>
+      </div>
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br>
+    <div id="output"></div>
+
+  <script>
+
+    $(document).ready( function(){
+      $("#myForm input").focus( function(){
+        $(this).css('background', 'pink');
+
+        $(this).blur(function(){
+          $(this).css('background', 'none');
+        });
+      });
+
+      $("#myForm select").change( function(){
+        var cat = "";
+        $("select option:selected").each(function(){
+          cat += $(this).text() + " ";
+        });
+
+        $('#output').text(cat);
+      });
+
+      $(":input").select( function() {
+        $("#output").text('Something was selected').show();
+      });
+
+      $('#myForm').submit( function(e){
+        $('#output').text('form submitted');
+        e.preventDefault();
+      });
+
+    });
+  </script>
+</body>
+</html>
