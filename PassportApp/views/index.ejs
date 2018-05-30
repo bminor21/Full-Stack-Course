@@ -1,0 +1,25 @@
+<%- include('include/header') %>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Passport Application</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/users/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+
+  <main role="main" class="container">
+
+    <div class="starter-template">
+      <h1>Welcome <%= user.name %></h1>
+    </div>
+
+  </main>
+<%- include('include/footer') %>
