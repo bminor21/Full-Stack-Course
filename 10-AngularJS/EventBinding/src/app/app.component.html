@@ -1,0 +1,5 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h3>{{text}}</h3>
+<br><br>
+<button (click)="clicked($event)">Click Me</button>
+<input type="text" (keyup.enter)="showText($event)" name="text" [(ngModel)]="text">

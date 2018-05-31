@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h1 class="text-center">My Blog</h1>
+  <br>
+  <form (submit)="AddPost()" class="myForm">
+    <input type="text" placeholder="Post Title" name="title "[(ngModel)]="title" class="form-control">
+    <br><br>
+    <textarea class="form-control" placeholder="Post Body" name="body" [(ngModel)]="body"></textarea>
+    <br><br>
+    <input class="btn btn-primary btn-block" type="submit" value="Submit">
+  </form>
+  <br><br>
+  <div>
+    <div class="panel" *ngFor="let post of posts">
+      <h3>{{post.title}}</h3>
+      <p>{{post.body}}</p>
+    </div>
+  </div>
+</div>
