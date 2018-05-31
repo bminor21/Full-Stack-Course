@@ -39,7 +39,7 @@ passport.use(new LocalStrategy(
       });
     });
   }
-  
+
 ));
 
 // Loggout
@@ -121,6 +121,14 @@ const Validate = function(req){
   req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
 
   return req.validationErrors();
+}
+
+const DoesUserExist = function(user){
+  db.users.find({ username: username }, function(error,user){
+    if( user.length > 0 ) return true;
+  });
+
+  return false;
 }
 
 const CreateUser = function(req) {
